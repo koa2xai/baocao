@@ -1,15 +1,14 @@
-# Hàm kiểm tra số đối xứng (không dùng chuỗi)
+
 def la_doi_xung(n):
     ban_dau = n
     dao = 0
     while n > 0:
-        so_cuoi = n % 10        # lấy chữ số cuối
+        so_cuoi = n % 10       
         dao = dao * 10 + so_cuoi
-        n = n // 10             # bỏ chữ số cuối
+        n = n // 10             
     return dao == ban_dau
+    
 
-
-# Hàm in tổng các số đối xứng trong đoạn A → B
 def tong_doi_xung(A, B):
     tong = 0
     for x in range(A, B + 1):
@@ -18,9 +17,6 @@ def tong_doi_xung(A, B):
     return tong
 
 
-# ---- CÁC CHỨC NĂNG MỞ RỘNG ----
-
-# 3. Liệt kê tất cả số đối xứng trong đoạn A → B
 def liet_ke_doi_xung(A, B):
     ds = []
     for x in range(A, B + 1):
@@ -29,7 +25,6 @@ def liet_ke_doi_xung(A, B):
     return ds
 
 
-# 4. Đếm có bao nhiêu số đối xứng trong đoạn A → B
 def dem_doi_xung(A, B):
     dem = 0
     for x in range(A, B + 1):
@@ -38,7 +33,6 @@ def dem_doi_xung(A, B):
     return dem
 
 
-# 5. Tìm số đối xứng lớn nhất trong đoạn
 def doi_xung_lon_nhat(A, B):
     lon_nhat = -1
     for x in range(A, B + 1):
@@ -47,7 +41,6 @@ def doi_xung_lon_nhat(A, B):
     return lon_nhat
 
 
-# 6. Tìm số đối xứng nhỏ nhất trong đoạn
 def doi_xung_nho_nhat(A, B):
     nho_nhat = None
     for x in range(A, B + 1):
@@ -56,8 +49,6 @@ def doi_xung_nho_nhat(A, B):
                 nho_nhat = x
     return nho_nhat
 
-
-# ------------------ MENU CHƯƠNG TRÌNH ------------------
 while True:
     print("\n===== MENU =====")
     print("1. Kiểm tra số đối xứng")
@@ -108,3 +99,4 @@ while True:
 
     else:
         print("Chức năng không hợp lệ, vui lòng chọn lại!")
+
